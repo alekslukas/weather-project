@@ -1,0 +1,129 @@
+.container {
+    margin-top: 30px;
+    max-width: 450px;
+  }
+  
+  .container-sm1,
+  .container-sm2 {
+    max-width: 450px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d3d6db;
+    text-align: center;
+    border-radius: 3px;
+    color: #4c8c99;
+    background: rgb(255, 253, 253);
+    background: linear-gradient(
+      184deg,
+      rgba(255, 253, 253, 1) 0%,
+      rgba(191, 191, 209, 0.1913807759431898) 35%,
+      rgba(171, 206, 213, 0.5051062661392682) 100%
+    );
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  .container-sm1 {
+    margin-bottom: 15px;
+  }
+  .container-sm2 {
+    margin-bottom: 15px;
+  }
+  #forecast {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .main {
+    font-size: 26px;
+    font-weight: 600;
+    color: #4c8c99;
+    margin-bottom: 5px;
+  }
+  ul {
+    list-style: none;
+    text-align: left;
+  }
+  #city-input {
+    border-color: #4b7a81 height 30px;
+    font-size: 15px;
+    border-radius: 3px;
+    width: 280px;
+  }
+  #button {
+    background: #6ba6b2;
+    color: #ffff;
+    border-color: #6ba6b2;
+    border-radius: 3px;
+    font-weight: 600;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  #button:hover {
+    cursor: pointer;
+    background: #ffff;
+    color: #6ba6b2;
+    border-color: #6ba6b2;
+  }
+  .date,
+  .time {
+    font-size: 10px;
+    color: #1a5d75;
+    font-weight: 600;
+  }
+  .date {
+    position: relative;
+    right: 99px;
+  }
+  .time {
+    position: relative;
+    left: 19px;
+  }
+  .secondary {
+    font-weight: 600;
+    color: #1a5d75;
+    text-align: left;
+    padding: 0 40px;
+    margin-top: 15px;
+    font-size: 18px;
+  }
+  .city {
+    font-size: 40px;
+    color: #1a5d75;
+    padding: 0px;
+    margin: 0px;
+  }
+  #place {
+    color: #1a5d75;
+    font-size: 23px;
+  }
+  #details {
+    color: #4c8c99;
+    margin-top: 15px;
+  }
+  footer {
+    max-width: 450px;
+    font-size: 12px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d3d6db;
+    color: #4c8c99;
+    padding: 5px 25px;
+    background: rgb(255, 253, 253);
+    background: linear-gradient(
+      184deg,
+      rgba(255, 253, 253, 1) 0%,
+      rgba(191, 191, 209, 0.1913807759431898) 35%,
+      rgba(171, 206, 213, 0.5051062661392682) 100%
+    );
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  
+  #now {
+    font-size: 28px;
+  }
+  .feels {
+    font-size: 20px;
+  }
+  #descriptionW {
+    text-transform: uppercase;
+  }
+  
