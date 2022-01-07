@@ -126,4 +126,8 @@
   #descriptionW {
     text-transform: uppercase;
   }
+  #git {
+      text-decoration: none;
+      color:rgb(56, 206, 206);
+  }
   
