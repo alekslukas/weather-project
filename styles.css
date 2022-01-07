@@ -4,6 +4,13 @@
   }
   
   .container-sm1,
+  .container-sm2,
+  footer{
+    background-image: url(img/background-sky.jpg);
+    background-size: 100%;
+  }
+  
+  .container-sm1,
   .container-sm2 {
     max-width: 450px;
     border-width: 2px;
@@ -11,14 +18,7 @@
     border-color: #d3d6db;
     text-align: center;
     border-radius: 3px;
-    color: #4c8c99;
-    background: rgb(255, 253, 253);
-    background: linear-gradient(
-      184deg,
-      rgba(255, 253, 253, 1) 0%,
-      rgba(191, 191, 209, 0.1913807759431898) 35%,
-      rgba(171, 206, 213, 0.5051062661392682) 100%
-    );
+    color: #5689c4;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
       rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
@@ -35,7 +35,7 @@
   .main {
     font-size: 26px;
     font-weight: 600;
-    color: #4c8c99;
+    color: #5689c4;
     margin-bottom: 5px;
   }
   ul {
@@ -43,29 +43,39 @@
     text-align: left;
   }
   #city-input {
-    border-color: #4b7a81 height 30px;
+    border-color: #bccee4 height 30px;
+    border-style:none;
+    opacity: 60%;
     font-size: 15px;
     border-radius: 3px;
     width: 280px;
+    color: #5689c4;
+  }
+  input:focus {
+     outline: none;
   }
   #button {
-    background: #6ba6b2;
+    background: #5689c4; 
     color: #ffff;
-    border-color: #6ba6b2;
+    border-color: #5689c4; 
+    border-style:hidden;
     border-radius: 3px;
     font-weight: 600;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   #button:hover {
     cursor: pointer;
-    background: #ffff;
-    color: #6ba6b2;
-    border-color: #6ba6b2;
+    background: none;
+    color:#4c79adcd; 
+    border-color:#f7fbfc; 
+    transition: ease-in-out 200ms;
+    border-style: solid;
+    border-width: 0.5px;
   }
   .date,
   .time {
     font-size: 10px;
-    color: #1a5d75;
+    color: #769fcd; 
     font-weight: 600;
   }
   .date {
@@ -78,7 +88,7 @@
   }
   .secondary {
     font-weight: 600;
-    color: #1a5d75;
+    color: #5689c4; 
     text-align: left;
     padding: 0 40px;
     margin-top: 15px;
@@ -86,16 +96,16 @@
   }
   .city {
     font-size: 40px;
-    color: #1a5d75;
+    color: #5689c4; 
     padding: 0px;
     margin: 0px;
   }
   #place {
-    color: #1a5d75;
+    color: #5689c4; 
     font-size: 23px;
   }
   #details {
-    color: #4c8c99;
+    color: #5689c4; 
     margin-top: 15px;
   }
   footer {
@@ -104,15 +114,8 @@
     border-width: 2px;
     border-style: solid;
     border-color: #d3d6db;
-    color: #4c8c99;
+    color: #769fcd; 
     padding: 5px 25px;
-    background: rgb(255, 253, 253);
-    background: linear-gradient(
-      184deg,
-      rgba(255, 253, 253, 1) 0%,
-      rgba(191, 191, 209, 0.1913807759431898) 35%,
-      rgba(171, 206, 213, 0.5051062661392682) 100%
-    );
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
       rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
@@ -124,10 +127,10 @@
     font-size: 20px;
   }
   #descriptionW {
-    text-transform: uppercase;
+    text-transform: capitalize;
   }
   #git {
       text-decoration: none;
-      color:rgb(56, 206, 206);
+      color:#8fb7cf; 
   }
   
