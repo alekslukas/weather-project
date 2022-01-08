@@ -2,7 +2,9 @@
     margin-top: 30px;
     max-width: 450px;
   }
-  
+  body {
+    font-family: 'Arima Madurai', cursive;
+  }
   .container-sm1,
   .container-sm2,
   footer{
@@ -24,6 +26,7 @@
   }
   .container-sm1 {
     margin-bottom: 15px;
+    padding-top: 10px;
   }
   .container-sm2 {
     margin-bottom: 15px;
@@ -56,12 +59,17 @@
   }
   #button {
     background: #5689c4; 
-    color: #ffff;
+    color:#f1ece7;
     border-color: #5689c4; 
     border-style:hidden;
     border-radius: 3px;
     font-weight: 600;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding-top: 5px;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    bottom: -2px;
   }
   #button:hover {
     cursor: pointer;
@@ -103,6 +111,7 @@
   #place {
     color: #5689c4; 
     font-size: 23px;
+    line-height: 1.2;
   }
   #details {
     color: #5689c4; 
@@ -130,7 +139,7 @@
     text-transform: capitalize;
   }
   #git {
-      text-decoration: none;
+      text-decoration: underline;
       color:#8fb7cf; 
   }
   
