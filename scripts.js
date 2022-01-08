@@ -41,6 +41,8 @@ function displaySearch(response) {
   
   let now = new Date();
   let date = now.getDate();
+  let month = now.getMonth();
+  let year = now.getUTCFullYear();
   let weekDays = [
     "Sunday",
     "Monday",
@@ -50,6 +52,22 @@ function displaySearch(response) {
     "Friday",
     "Saturday"
   ];
+
+  let followingMonths = [
+    "January", 
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+
   let day = weekDays[now.getDay()];
   let timeH = now.getHours();
   if (timeH < 10) {
@@ -59,8 +77,10 @@ function displaySearch(response) {
   if (timeM < 10) {
     timeM = `0${timeM}`;
   }
+let monthN = followingMonths[now.getMonth()]; 
+
   let nowDay = document.querySelector("#date");
-  nowDay.innerHTML = `${day},`;
+  nowDay.innerHTML = `${date} ${monthN} ${year} ${day},`;
   let nowTime = document.querySelector("#time");
   nowTime.innerHTML = `${timeH}:${timeM}`;
   
