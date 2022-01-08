@@ -1,8 +1,8 @@
 function displaySearch(response) {
     document.querySelector("#citySearch").innerHTML = response.data.name;
-    document.querySelector("#nowT").innerHTML = `${Math.round(
+    document.querySelector("#nowT").innerHTML = Math.round(
       response.data.main.temp
-    )} °C`;
+    );
     document.querySelector("#feels").innerHTML = `Feels like ${Math.round(
       response.data.main.feels_like
     )}°C`;
