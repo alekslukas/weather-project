@@ -17,8 +17,9 @@ function displaySearch(response) {
     ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
     document.querySelector("#descriptionW").innerHTML =
       response.data.weather[0].description;
-    document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
     document.querySelector("#update").innerHTML = `Last forecast update: ${lastUpdate(response.data.dt*1000)}`;
+    document.querySelector("#iconSource").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    document.querySelector("#iconSource").setAttribute("alt", response.data.weather[0].description);
   }
   
   function search(city) {
