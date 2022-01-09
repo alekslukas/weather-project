@@ -3,7 +3,7 @@ function displaySearch(response) {
     document.querySelector("#nowT").innerHTML = Math.round(
       response.data.main.temp
     );
-    document.querySelector("#feels").innerHTML = `Feels like ${Math.round(
+    document.querySelector("#feels").innerHTML = `${Math.round(
       response.data.main.feels_like
     )}°C`;
     document.querySelector(

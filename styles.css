@@ -129,13 +129,13 @@
   }
   
   #now {
-    font-size: 28px;
-  }
-  .feels {
-    font-size: 20px;
+    font-size: 25px;
+    text-align: center;
   }
   #descriptionW {
     text-transform: capitalize;
+    font-weight: 600;
+    
   }
   #git {
       text-decoration: underline;
@@ -143,4 +143,18 @@
   }
   #update { 
       font-size: 12px;
+  }
+  #iconSource{
+      height: 60px;
+      width: 60px;
+  }
+  #location {
+      padding-top: 15px;
+  }
+  #nowT, #feels{
+      font-weight: 600;
+      color: #a17e9c;
+  }
+  #feelingT {
+      font-size: 20px;
   }
