@@ -18,12 +18,12 @@ function displaySearch(response) {
     document.querySelector("#descriptionW").innerHTML =
       response.data.weather[0].description;
     document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
+    document.querySelector("#update").innerHTML = `Last forecast update: ${lastUpdate(response.data.dt*1000)}`;
   }
   
   function search(city) {
     let units = "metric";
     let key = "a3c7d7e43998da127d7076ec879183cf";
-  
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`;
     axios.get(url).then(displaySearch);
   }
@@ -54,18 +54,18 @@ function displaySearch(response) {
   ];
 
   let followingMonths = [
-    "January", 
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
+    "01", 
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12"
   ];
 
   let day = weekDays[now.getDay()];
@@ -80,7 +80,20 @@ function displaySearch(response) {
 let monthN = followingMonths[now.getMonth()]; 
 
   let nowDay = document.querySelector("#date");
-  nowDay.innerHTML = `${date} ${monthN} ${year} ${day},`;
+  nowDay.innerHTML = `${date}.${monthN}.${year} ${day},`;
   let nowTime = document.querySelector("#time");
   nowTime.innerHTML = `${timeH}:${timeM}`;
   
+  function lastUpdate(timestamp) {
+    let date = new Date(timestamp);
+    let hourU = date.getHours();
+    if (hourU < 10) {
+      hourU = `0${hourU}`;
+    }
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+    return ` ${hourU}:${minutes}`;
+}
+ 

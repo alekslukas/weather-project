@@ -70,6 +70,7 @@
     text-align: center;
     position: relative;
     bottom: -2px;
+    padding-bottom: 3px;
   }
   #button:hover {
     cursor: pointer;
