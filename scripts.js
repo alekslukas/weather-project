@@ -1,8 +1,8 @@
 function displaySearch(response) {
+    celciusTemp = response.data.main.temp;
     document.querySelector("#citySearch").innerHTML = response.data.name;
     document.querySelector("#nowT").innerHTML = Math.round(
-      response.data.main.temp
-    );
+        celciusTemp);
     document.querySelector("#feels").innerHTML = `${Math.round(
       response.data.main.feels_like
     )}°C`;
@@ -34,11 +34,6 @@ function displaySearch(response) {
     let city = document.querySelector("#city-input").value;
     search(city);
   }
-  
-  let cityName = document.querySelector("#search-form");
-  cityName.addEventListener("submit", showCity);
-  
-  search("Gdansk");
   
   let now = new Date();
   let date = now.getDate();
@@ -98,3 +93,30 @@ let monthN = followingMonths[now.getMonth()];
     return ` ${hourU}:${minutes}`;
 }
  
+
+function showFarenheit(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#nowT");
+    let farenheitCalcutaion = (celciusTemp * 9) / 5 + 32;
+    temperatureElement.innerHTML = Math.round(farenheitCalcutaion);
+}
+
+function showCelcius(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#nowT");
+    temperatureElement.innerHTML = Math.round(celciusTemp);
+}
+
+let celciusTemp = null;
+
+let cityName = document.querySelector("#search-form");
+cityName.addEventListener("submit", showCity);
+
+let farenheit = document.querySelector("#linkF");
+farenheit.addEventListener("click", showFarenheit); 
+
+let celcius = document.querySelector("#linkC");
+celcius.addEventListener("click", showCelcius); 
+
+
+search("Gdansk");

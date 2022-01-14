@@ -135,7 +135,7 @@
   #descriptionW {
     text-transform: capitalize;
     font-weight: 600;
-    
+
   }
   #git {
       text-decoration: underline;
@@ -157,4 +157,7 @@
   }
   #feelingT {
       font-size: 20px;
+  }
+  #linkC, #linkF {
+      text-decoration: none;
   }
