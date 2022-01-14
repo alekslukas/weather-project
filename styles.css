@@ -161,3 +161,13 @@
   #linkC, #linkF {
       text-decoration: none;
   }
+  #now .active { 
+      color: #5689c4;
+
+  }
+
+  #now .active:hover { 
+    color: #5689c4;
+    cursor: default;
+
+}

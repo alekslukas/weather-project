@@ -96,6 +96,8 @@ let monthN = followingMonths[now.getMonth()];
 
 function showFarenheit(event) {
     event.preventDefault();
+    celcius.classList.remove("active");
+    farenheit.classList.add("active");
     let temperatureElement = document.querySelector("#nowT");
     let farenheitCalcutaion = (celciusTemp * 9) / 5 + 32;
     temperatureElement.innerHTML = Math.round(farenheitCalcutaion);
@@ -103,6 +105,8 @@ function showFarenheit(event) {
 
 function showCelcius(event) {
     event.preventDefault();
+    celcius.classList.add("active");
+    farenheit.classList.remove("active");
     let temperatureElement = document.querySelector("#nowT");
     temperatureElement.innerHTML = Math.round(celciusTemp);
 }
