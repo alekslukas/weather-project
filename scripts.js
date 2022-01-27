@@ -93,6 +93,42 @@ let monthN = followingMonths[now.getMonth()];
     return ` ${hourU}:${minutes}`;
 }
  
+function showForecast() {
+
+  let forecast = document.querySelector("#forecast");
+
+  let forecastHTLM = `<div class=row>`;
+  forecastHTLM = forecastHTLM +
+   `
+  <div class="row row-cols-5" class="days">
+  <div class="col-sm" class="c1">Fri</div>
+</div>
+<div class="row row-cols-5" class="icon">
+  <div class="col-sm" class="i1">
+    <i class="fas fa-cloud-sun-rain"></i>
+  </div>
+</div>
+<div class="row row-cols-5" class="nexttemp">
+  <div class="col-sm" class="t1">-3°C</div>
+</div>
+  `
+  forecastHTLM = forecastHTLM +
+   `
+  <div class="row row-cols-5" class="days">
+  <div class="col-sm" class="c1">Fri</div>
+</div>
+<div class="row row-cols-5" class="icon">
+  <div class="col-sm" class="i1">
+    <i class="fas fa-cloud-sun-rain"></i>
+  </div>
+</div>
+<div class="row row-cols-5" class="nexttemp">
+  <div class="col-sm" class="t1">-3°C</div>
+</div>
+  `;
+  forecastHTLM = `</div>`;
+  forecast.innerHTML = forecastHTLM; 
+}
 
 function showFarenheit(event) {
     event.preventDefault();
@@ -124,3 +160,4 @@ celcius.addEventListener("click", showCelcius);
 
 
 search("Gdansk");
+showForecast();
