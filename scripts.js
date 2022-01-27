@@ -97,36 +97,34 @@ function showForecast() {
 
   let forecast = document.querySelector("#forecast");
 
-  let forecastHTLM = `<div class=row>`;
+  let forecastHTLM = `<div class= "row">`;
   forecastHTLM = forecastHTLM +
    `
-  <div class="row row-cols-5" class="days">
-  <div class="col-sm" class="c1">Fri</div>
-</div>
-<div class="row row-cols-5" class="icon">
-  <div class="col-sm" class="i1">
-    <i class="fas fa-cloud-sun-rain"></i>
-  </div>
-</div>
-<div class="row row-cols-5" class="nexttemp">
-  <div class="col-sm" class="t1">-3°C</div>
-</div>
+   <div class="col-2">
+   <div class="forecast-date">${day}</div>
+   <img
+     src="http://openweathermap.org/img/wn/50d@2x.png"
+     width="42"
+   />
+   <div class="forecast-temperatures">
+     <span class="temperature-next"> 18° </span>
+   </div>
+ </div>
   `
   forecastHTLM = forecastHTLM +
    `
-  <div class="row row-cols-5" class="days">
-  <div class="col-sm" class="c1">Fri</div>
-</div>
-<div class="row row-cols-5" class="icon">
-  <div class="col-sm" class="i1">
-    <i class="fas fa-cloud-sun-rain"></i>
-  </div>
-</div>
-<div class="row row-cols-5" class="nexttemp">
-  <div class="col-sm" class="t1">-3°C</div>
-</div>
+   <div class="col-2">
+   <div class="forecast-date">${day}</div>
+   <img
+     src="http://openweathermap.org/img/wn/50d@2x.png"
+     width="42"
+   />
+   <div class="forecast-temperatures">
+     <span class="temperature-next"> 18° </span>
+   </div>
+ </div>
   `;
-  forecastHTLM = `</div>`;
+  forecastHTLM = forecastHTLM + `</div>`;
   forecast.innerHTML = forecastHTLM; 
 }
 
