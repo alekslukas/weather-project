@@ -102,29 +102,46 @@ let monthN = followingMonths[now.getMonth()];
     }
     return ` ${hourU}:${minutes}`;
 }
+
+function dayFormat(dateStamp) {
+  let date = new Date(dateStamp*1000);
+  day = date.getDay();
+let days = ["Sunday",
+"Monday",
+"Tuesday",
+"Wednesday",
+"Thursday",
+"Friday",
+"Saturday"];
+return days[day]; 
+}
  
 function showForecast(response) {
-console.log(response.data.daily);
+ let nextDays = response.data.daily;
+
   let forecast = document.querySelector("#forecast");
 
   let forecastHTLM = `<div class= "row">`;
 
-let days =[ "Monday", "Tuesday", "Wednesday"]; 
-days.forEach(function(day){
-   forecastHTLM = forecastHTLM +
+
+nextDays.forEach(function (forecastDay, index) {
+   
+  if (index < 5) {
+
+  forecastHTLM = forecastHTLM +
    `
-   <div class="col-2">
-   <div class="forecast-date">${day}</div>
+   <div class="col-1">
+   <div class="forecast-date">${dayFormat(forecastDay.dt)}</div>
    <img
-     src="http://openweathermap.org/img/wn/50d@2x.png"
-     width="42"
-   />
+     src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+     width="42"/>
    <div class="forecast-temperatures">
-     <span class="temperature-next"> 18° </span>
+     <span class="temperature-next"> ${Math.round(forecastDay.temp.day)}°C </span>
    </div>
  </div>
-  `
-})
+  `;
+  }
+});
 
   forecastHTLM = forecastHTLM + `</div>`;
   forecast.innerHTML = forecastHTLM; 
@@ -158,6 +175,4 @@ farenheit.addEventListener("click", showFarenheit);
 let celcius = document.querySelector("#linkC");
 celcius.addEventListener("click", showCelcius); 
 
-
 search("Gdansk");
-
