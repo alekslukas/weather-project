@@ -2,7 +2,7 @@ function getForecast(coordinates){
   console.log(coordinates);
   let key = "a3c7d7e43998da127d7076ec879183cf";
   let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${key}&units=metric`; 
-  console.log(url);
+  axios.get(url).then(showForecast);
 }
 
 
@@ -103,8 +103,8 @@ let monthN = followingMonths[now.getMonth()];
     return ` ${hourU}:${minutes}`;
 }
  
-function showForecast() {
-
+function showForecast(response) {
+console.log(response.data.daily);
   let forecast = document.querySelector("#forecast");
 
   let forecastHTLM = `<div class= "row">`;
@@ -160,4 +160,4 @@ celcius.addEventListener("click", showCelcius);
 
 
 search("Gdansk");
-showForecast();
+
