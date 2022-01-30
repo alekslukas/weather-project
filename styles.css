@@ -159,12 +159,9 @@
   #feelingT {
       font-size: 20px;
   }
-  #linkC, #linkF {
-      text-decoration: none;
-  }
+
   #now .active { 
       color: #5689c4;
-
   }
 
   #now .active:hover { 
