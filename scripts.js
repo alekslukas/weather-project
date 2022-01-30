@@ -130,7 +130,7 @@ nextDays.forEach(function (forecastDay, index) {
 
   forecastHTLM = forecastHTLM +
    `
-   <div class="col-2">
+   <div class="col">
    <div class="forecast-date">${dayFormat(forecastDay.dt)}</div>
    <img
      src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"

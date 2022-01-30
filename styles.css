@@ -173,3 +173,10 @@
 #forecast {
   text-align: center;
 }
+.row {
+  display: flex;
+}
+.col {
+  flex: 8%;
+  padding: 0;
+}
