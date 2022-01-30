@@ -146,8 +146,8 @@
       font-size: 12px;
   }
   #iconSource{
-      height: 60px;
-      width: 60px;
+      height: 65px;
+      width: 65px;
   }
   #location {
       padding-top: 15px;
@@ -180,5 +180,9 @@
 }
 .forecast-date {
   font-size: 13px;
+  font-weight: 600;
+}
+.temperature-next {
+  color: #a17e9c;
   font-weight: 600;
 }
