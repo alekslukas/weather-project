@@ -147,32 +147,12 @@ nextDays.forEach(function (forecastDay, index) {
   forecast.innerHTML = forecastHTLM; 
 }
 
-function showFarenheit(event) {
-    event.preventDefault();
-    celcius.classList.remove("active");
-    farenheit.classList.add("active");
-    let temperatureElement = document.querySelector("#nowT");
-    let farenheitCalcutaion = (celciusTemp * 9) / 5 + 32;
-    temperatureElement.innerHTML = Math.round(farenheitCalcutaion);
-}
 
-function showCelcius(event) {
-    event.preventDefault();
-    celcius.classList.add("active");
-    farenheit.classList.remove("active");
-    let temperatureElement = document.querySelector("#nowT");
-    temperatureElement.innerHTML = Math.round(celciusTemp);
-}
 
 let celciusTemp = null;
 
 let cityName = document.querySelector("#search-form");
 cityName.addEventListener("submit", showCity);
 
-let farenheit = document.querySelector("#linkF");
-farenheit.addEventListener("click", showFarenheit); 
-
-let celcius = document.querySelector("#linkC");
-celcius.addEventListener("click", showCelcius); 
 
 search("Gdansk");

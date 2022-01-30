@@ -97,9 +97,10 @@
     font-weight: 600;
     color: #5689c4; 
     text-align: left;
-    padding: 0 40px;
+    padding: 5px 0 0 15px;
     margin-top: 15px;
     font-size: 18px;
+
   }
   .city {
     font-size: 40px;
@@ -179,4 +180,8 @@
 .col {
   flex: 8%;
   padding: 0;
+}
+.forecast-date {
+  font-size: 13px;
+  font-weight: 600;
 }
